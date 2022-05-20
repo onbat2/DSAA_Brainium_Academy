@@ -37,4 +37,4 @@ int main(){
     int* arr = new int[n]();
     generate(arr, n);
     return 0;
-}
+} 
