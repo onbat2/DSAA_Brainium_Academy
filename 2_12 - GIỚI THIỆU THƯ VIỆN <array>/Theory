@@ -1,0 +1,50 @@
+1,Khai báo mảng
+ - Lớp nguyên mẫu array là một lớp được xây dựng sẵn hỗ trợ các thao tác với các phần tử mảng.
+ - Để sử dụng lớp array ta nạp thư viện array vào qua cú pháp #include <array>
+ - Cú pháp khai báo và sử dụng lớp array:
+      array<type, arraySize> arrayName;
+ - Trong đó:
+  + array là tên lớp mặc định, các bạn giữ nguyên
+  + type là kiểu của các phần tử trong mảng, có thể là bất kì kiểu dữ liệu hợp lệ nào trong C++
+  + arraySize là kích thước tối đa của mảng. Kích thước mảng luôn là số nguyên dương > 0
+  + arrayName là tên mảng do các bạn tự đặt
+  + Kết thúc khai báo là dấu chấm phẩy
+  
+2,Khởi tạo mảng
+ - C++ cho phép ta khởi tạo giá trị cho các phần tử mảng ngay khi ta khai báo mảng.
+ - Cú pháp tổng quát:
+      array<type, size> arrayName = { array elements };
+ - Trong đó:
+  + array elements là danh sách các phần tử cần khởi tạo cho mảng. Chúng được bao bên trong cặp ngoặc {}
+  + Nếu số phần tử khởi tạo cho mảng nhiều hơn 1 phần tử, các phần tử sẽ ngăn cách nhau bằng dấu phẩy
+  + Số lượng phần tử khởi tạo cho mảng phải nhỏ hơn hoặc bằng số phần tử tối đa của mảng
+  + Nếu phần khởi tạo(array elements) không chứa phần tử nào, hoặc chứa ít phần tử hơn số phần tử tói đa của mảng thì các phần tử còn lại sẽ được khởi tạo bằng giá trị mặc định của kiểu mà nó được khai báo
+  + Nếu bạn khởi tạo mảng với số phần tử khởi tạo lớn hơn số phần tử tối đa, chương trình sẽ bị lỗi
+  + Kết thúc khởi tạo là dấu chấm phẩy
+  
+3,Duyệt mảng
+ - Để duyệt mảng, ta sử dụng vòng lặp for như hai ví dụ ở trên.
+ - Cú pháp gán, truy xuất phần tử tại vị trí index nào đó trong mảng thực hiện tương tự mảng thông thường.
+ - Chỉ số phần tử mảng luôn nằm trong đoạn [0, size – 1] với size là số phần tử tối đa của mảng.
+ - Để duyệt toàn bộ phần tử mảng từ đầu đến cuối mà không lo vấn đề chỉ số phần tử mảng, ta có thể sử dụng vòng lặp for với cú pháp sau:
+      for(declare : expression) {
+          // statement
+      }
+      
+4,Truyền mảng vào hàm
+ - Để truyền mảng vào hàm ta sử dụng hàm template(học cụ thể ở phần sau của khóa học).
+ 
+5,Sắp xếp các phần tử trong mảng
+ - Để sắp xếp các phần tử mảng ta sử dụng thuật toán sắp xếp có sẵn trong thư viện algorithm.
+ - Đoạn:
+      sort(ages.begin(), ages.end());
+      sort(colors.begin(), colors.end());
+-> Dùng để sắp xếp các phần tử trong mảng bắt đầu từ vị trí đầu mảng đánh dấu bởi begin() và kết thúc ở cuối mảng với end().
+ - Để sắp xếp các phần tử theo thứ tự giảm dần, ta bổ sung thêm greater() vào làm tham số thứ 3 của hàm sort():
+      // sắp xếp phần tử mảng theo thứ tự giảm dần:
+      sort(ages.begin(), ages.end(), greater());
+      sort(colors.begin(), colors.end(), greater());
+
+6,Tìm kiếm trong mảng
+ - Để tìm kiếm các phần tử trong mảng ta sử dụng hàm tìm kiếm binary_search() của thư viện algorithms.
+ - Lưu ý rằng để có kết quả chính xác khi tìm kiếm, phải đảm bảo mảng chứa các phần tử đã được sắp xếp theo thứ tự tăng dần.
