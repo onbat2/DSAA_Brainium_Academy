@@ -48,3 +48,4 @@
 6,Tìm kiếm trong mảng
  - Để tìm kiếm các phần tử trong mảng ta sử dụng hàm tìm kiếm binary_search() của thư viện algorithms.
  - Lưu ý rằng để có kết quả chính xác khi tìm kiếm, phải đảm bảo mảng chứa các phần tử đã được sắp xếp theo thứ tự tăng dần.
+ 
