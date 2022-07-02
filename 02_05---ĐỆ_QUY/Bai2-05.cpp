@@ -18,3 +18,4 @@ int main(){
     auto result = factorial(n);
     cout << n << "! = " << result << endl;
 }
+
